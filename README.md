@@ -15,21 +15,24 @@ git clone git@github.com:ArneBinder/hydra-cached-example.git
 # show help for hydra-cached
 instantiate -h
 ```
-NOTE: The following examples assume that the root of this repo is the current working directory (i.e. `cd hydra-cached-example` was executed).
+NOTE: The following examples assume that the root of this repo:
+* is the current working directory, i.e. `cd hydra-cached-example` was executed, and
+* it is in the python path, i.e. `export PYTHONPATH=.` or similar was executed (otherwise just prepend `PYTHONPATH=. ` 
+  to the example commands).
 
 Simple hello world example ([config](configs/hello_world.py)):
 ```bash
-PYTHONPATH=. instantiate configs.hello_world
+instantiate configs.hello_world
 ```
 
 Same as above, but load name from file and show the config in yaml format via `-d`/`--display_config` ([config](configs/hello_file.py)):
 ```bash
-PYTHONPATH=. instantiate configs.hello_file -d
+instantiate configs.hello_file -d
 ```
 
 Persisting the cache with `-p`/`--persist_cache` ([config](configs/takes_time.py)):
 ```bash
-PYTHONPATH=. instantiate configs.takes_time -p -d
+instantiate configs.takes_time -p -d
 ```
 NOTES: 
  * Using `-p`/`--persist_cache` will also check, if there is content in the cache directory and load that, before instantiation starts.
