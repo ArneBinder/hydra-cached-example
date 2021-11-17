@@ -16,7 +16,8 @@ git clone git@github.com:ArneBinder/hydra-cached-example.git
 instantiate -h
 ```
 NOTE: The following examples assume that the root of this repo:
-* is the current working directory, i.e. `cd hydra-cached-example` was executed, and
+* is the current working directory, i.e. `cd hydra-cached-example` was executed (necessary to make the file paths in 
+  the configs work), and
 * it is in the python path, i.e. `export PYTHONPATH=.` or similar was executed (otherwise just prepend `PYTHONPATH=. ` 
   to the example commands).
 
