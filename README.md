@@ -15,6 +15,10 @@ git clone git@github.com:ArneBinder/hydra-cached-example.git
 # show help for hydra-cached
 instantiate -h
 
-# execute example (don't forget to add the location of code and configs to the python path)
-PYTHONPATH=hydra-cached-example instantiate configs.hello_mike
+# move into the folder (just necessary to get example paths right)
+cd hydra-cached-example
+
+# execute simple example (don't forget to add the location of code and configs to the python path)
+PYTHONPATH=. instantiate configs.hello_mike
+
 ```
